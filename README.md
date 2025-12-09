@@ -93,29 +93,29 @@ This section captures my work configuring foundational and advanced IAM capabili
 ![IAM13](https://github.com/user-attachments/assets/1da097fd-2c74-4cb9-99b1-6f21a57a3224)
 
 **Steps:**
-- Converted permanent admin roles into eligible  
-- Added approval workflow  
-- Added justification + access review scheduling  
+- Selected Windows 11 image and configured size, region, and admin settings
+- Chose VNet + subnet and enabled RDP access through NSG
+- Enabled Entra ID login 
 
 ---
 
 ### **7. RBAC for VM Access**
 ![IAM14](https://github.com/user-attachments/assets/ebeec6ab-599f-4719-9d17-b235768a7f34)
 
-Performed Entra ID Secure Score improvements:
-- Reduced attack surface  
-- Enabled sign-in anomaly alerts  
-- Integrated Defender XDR identity signals  
+**Configured:** 
+- Selected the newly created Virtual Machine 
+- Selected Access control (IAM).
+- Select + Add, then Add role assignment to open the Add role assignment page
+- Assigned VM Admin Login role to appropriate user 
 
 ---
 
 ### **8. Connecting to Azure VM**
 ![IAM15](https://github.com/user-attachments/assets/a79b33f2-468e-4b7c-8d0d-5cc26730cc98)
 
-Configured:
-- Restrictions on guest invitations  
-- B2B cross-tenant collaboration policies  
-- Allowed federated identity providers  
+**Connected:**
+- Downloaded the VM’s auto-generated RDP file from Azure
+- Entered the assigned local admin credentials to establish the session
 
 ---
 
@@ -123,10 +123,14 @@ Configured:
 <img width="1919" height="1199" alt="image" src="https://github.com/user-attachments/assets/bd37476d-9728-45bf-ac0d-6e40e3168149" />
 
 
-Added:
-- SAML/OIDC-based app  
-- User assignment controls  
-- Conditional Access per-app policies  
+**Allowed:**
+- Type Control Panel and launch the control panel app.
+- Select System and Security from the list of settings.
+- From the System setting, select the Allow remote access option.
+- At the bottom of the dialog box that opens you will see a Remote Desktop section.
+- Uncheck the box labeled Allow connections only from computers running Remote Desktop with Network Level Authentication.
+
+Select Apply and then OK.
 
 ---
 
@@ -136,9 +140,11 @@ Added:
 
 
 Configured:
-- User access reviews for critical groups  
-- Guest access expiration  
-- Automated decision + auto-removal  
+- Opened Settings → Accounts → Access work or school and selected Connect → Join this device to Microsoft Entra ID
+- Signed in with the Entra user to complete the Azure AD Join
+- Ran PowerShell as admin and added the user to Remote Desktop Users: net localgroup "Remote Desktop Users" /add "AzureAD\MonicaT"
+
+ 
 
 ---
 
