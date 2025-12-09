@@ -1,3 +1,10 @@
+# MYTenant — Azure Identity & Cybersecurity Architecture Lab
+
+This repository documents the full build-out of my Azure tenant focusing **Identity & Access Management (IAM)** and **Cybersecurity Architecture**.  
+It includes Entra ID configuration, Conditional Access, PIM, Defender XDR, Sentinel integration, Intune onboarding, and Zero Trust controls.  
+All screenshots and workflows are organized into collapsible sections for clarity.
+
+
 # 🔐 Identity & Access Management (IAM)
 
 ## Overview
