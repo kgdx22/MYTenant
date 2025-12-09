@@ -198,35 +198,35 @@ Built full Zero Trust alignment:
 <img width="1917" height="999" alt="image" src="https://github.com/user-attachments/assets/2e6cd180-8470-4cb3-996f-c0fabc65158d" />
 
 
-Configured:
+**Configured:**
 
 - Restrictions on guest invitations
 - B2B cross-tenant collaboration policies
-- Allowed federated identity providers  
+- Registered enterprise apps and assigned required API permissions (Graph, Directory, User.Read, etc.)
+- Granted admin consent to authorize delegated/app permissions for tenant-wide use
+- Configured authentication settings (redirect URI, supported account types, implicit/OAuth settings) to enable secure sign-in via Microsoft Entra ID
 
 ---
 
 ### **3. Sentinel - Log Analytics Workspace Integration**
 <img width="1918" height="991" alt="image" src="https://github.com/user-attachments/assets/33867555-62de-44f0-91ef-d37834b97e6b" />
 <img width="1918" height="934" alt="image" src="https://github.com/user-attachments/assets/850111e0-3552-4ae9-baa9-b434d80dc738" />
+<img width="1918" height="997" alt="image" src="https://github.com/user-attachments/assets/8beb34d2-de96-4ce3-a296-920781157f45" />
 
-
-Enabled:
-- Security recommendations  
-- Regulatory compliance templates  
-- Attack path analysis (preview)  
-
+**Enabled:**
+- Created a new Azure Storage account + Log Analytics Workspace (LAW) to act as the main log lake/telemetry store 
+- Enabled Sentinel on the LAW — converting it into a Sentinel workspace to ingest security logs and events 
+- Configured data connectors (e.g. Azure Activity logs, Azure AD sign-ins, resource logs) to feed cloud data into Sentinel for monitoring and detection
 ---
 
 ### **4. Defender for Endpoint Onboarding**
-<img width="1918" height="997" alt="image" src="https://github.com/user-attachments/assets/8beb34d2-de96-4ce3-a296-920781157f45" />
 <img width="1918" height="994" alt="image" src="https://github.com/user-attachments/assets/72bd2f9b-ac96-4854-89c6-06ed72637d59" />
 <img width="1918" height="994" alt="image" src="https://github.com/user-attachments/assets/bdcc91ca-7c73-46fc-a4af-ca8f6dbaee67" />
 <img width="1918" height="991" alt="image" src="https://github.com/user-attachments/assets/cf7e5cec-ddf8-4f42-879e-02b3535a2a04" />
 <img width="1885" height="1189" alt="image" src="https://github.com/user-attachments/assets/4b97cc12-6985-4f07-959f-c11dfea312d2" />
 
 
-Steps taken:
+**Steps taken:**
 - Enabled MDE integration  
 - Configured Intune connector  
 - Onboarded VM via policy  
@@ -238,6 +238,12 @@ Steps taken:
 <img width="1918" height="996" alt="image" src="https://github.com/user-attachments/assets/e1dc3f3f-df94-403a-b9ff-9a4c9939888c" />
 <img width="1918" height="999" alt="image" src="https://github.com/user-attachments/assets/42db3740-eaed-418c-bad5-4c84aed17bd9" />
 <img width="1918" height="991" alt="image" src="https://github.com/user-attachments/assets/d500a841-3f9b-4f56-96e5-f9aa531e3407" />
+
+**Steps Taken:**
+- Enabled the Defender for Endpoint → Intune connector to allow device risk reporting & automatic onboarding
+- Created an MDE “Endpoint Detection & Response” (EDR) policy in Intune and assigned it to my lab device group
+- Downloaded / applied the onboarding package (auto-inserted via connector) so the VM registers with MDE
+- Synced the device in Intune, verified compliance, and confirmed the VM shows Onboarded in Microsoft Defender for Endpoint
 
 </details>
 
