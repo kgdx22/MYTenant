@@ -171,7 +171,7 @@ This section documents my security architecture design work:
 ## **Cybersecurity Architecture — Screenshots & Steps**
 
 <details>
-  <summary><strong>SC-100 Architecture (Screens 1–5)</strong></summary><br>
+  <summary><strong> MDE Onboarding (Screens 1–5)</strong></summary><br>
 
 ### **1. Zero Trust Overview**
 ![SC1](https://github.com/user-attachments/assets/045347a5-f449-4977-ab5d-090c029331cf)
@@ -238,7 +238,7 @@ Steps taken:
 ---
 
 <details>
-  <summary><strong>SC-100  Purview & Sentinel  (Screens 5–20)</strong></summary><br>
+  <summary><strong> Zero Trust & Purview Governance (Screens 5–20)</strong></summary><br>
 
 
 
